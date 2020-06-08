@@ -2,7 +2,9 @@
 {% load static %}
 {% block page_content %}
 
-<h1 style="text-align:center">Notes</h1>
+<br>
+<h1 style="text-align:center;font-family:Marker Felt">Notes</h1>
+
 <div class="column" class="center">
 {% for note in notes %}
     <div>
@@ -11,6 +13,7 @@
                 <h4 class="card-title">{{ note.title }}</h4>
                 <p class="card-text">{{ note.description }}</p>
                 <a href="">{{ note.genre }}</a>
+                <hr>
 
 
         </div>
