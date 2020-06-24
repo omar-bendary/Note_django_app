@@ -8,16 +8,28 @@
 <div class="column" class="center">
 {% for note in notes %}
     <div>
+
         
             <div class="card-body">
-                <h4 class="card-title">{{ note.title }}</h4>
-                <p class="card-text">{{ note.description }}</p>
-                <a href="">{{ note.genre }}</a>
-                <hr>
+            <tr>
+               <td> <h4 class="card-title">{{ note.title }}</h4></td>
+              <td>  <p class="card-text">{{ note.description }}</p></td>
+               <td> <a href="">{{ note.genre }}</a></td>
+               <br>
+               <br>
+               
+               <td><a class="btn btn-sm btn-info" href="{% url 'notes:update_note' note.id %}">Update</a></td>
 
+						<td><a class="btn btn-sm btn-danger" href="{% url 'notes:delete_note' note.id %}">Delete</a></td>
+                <hr>
+            </tr>
 
         </div>
     </div>
     {% endfor %}
 </div>
 {% endblock %}
+
+
+
+
